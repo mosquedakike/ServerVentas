@@ -1,0 +1,70 @@
+﻿@using Entities
+@using Business
+
+<div>
+    <EditForm Model="oVenta">
+        <div class="form-group">
+            <label>Empleado</label>
+            <InputSelect class="form-control" @bind-Value="oVenta.EmpleadoId">
+                <option value="">Seleccione empleado</option>
+                @foreach (var empleado in empleados)
+                {
+                    <option value="@empleado.EmpleadoId">@empleado.NombreEmpleado @empleado.ApPaterno @empleado.ApMaterno</option>
+                }
+            </InputSelect>
+        </div>
+        @*<div class="form-group">
+                <label>Municipio</label>
+                <input class="form-control" id="disabledInput" type="text" placeholder="" disabled>
+            </div>*@
+        <div class="form-group">
+            <label class="form-label">Producto</label>
+            <input @bind-value="oVenta.NombreProducto" class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Buscar producto...">
+            <datalist id="datalistOptions">
+                @foreach (var producto in productos)
+                {
+                    <option value="@producto.NombreProducto"></option>
+                }
+            </datalist>
+        </div>
+        <div class="form-group">
+            <label>Viscosidad</label>
+            <InputText @bind-Value="oVenta.DescripcionProducto" class="form-control"></InputText>
+        </div>
+        <div class="form-group">
+            <label>Litros</label>
+            <InputNumber @bind-Value="oVenta.Cantidad" class="form-control" min="1"></InputNumber>
+        </div>
+        <div class="form-group">
+            <label>Fecha</label>
+            <InputDate @bind-Value="oVenta.FechaVenta" class="form-control"></InputDate>
+        </div>
+        <input class="btn btn-primary" type="button" value="Guardar" @onclick="GuardarVenta" />
+    </EditForm>
+</div>
+
+@code {
+
+    EntidadVenta oVenta = new EntidadVenta();
+    EntidadProducto oProducto = new EntidadProducto();
+    EntidadProyecto oProyecto = new EntidadProyecto();
+    EntidadEmpleado oEmpleado = new EntidadEmpleado();
+
+    List<EntidadEmpleado> empleados = new List<EntidadEmpleado>();
+    List<EntidadProducto> productos = new List<EntidadProducto>();
+    List<EntidadProyecto> proyectos = new List<EntidadProyecto>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        empleados = B_Empleado.ListaEmpleado();
+        productos = B_Producto.ListaProducto();
+        proyectos = B_Proyecto.ListaProyecto();
+    }
+
+    private void GuardarVenta()
+    {
+        oVenta.FechaCaptura = DateTime.Now;
+        B_Venta.CrearVenta(oVenta);
+    }
+
+}
