@@ -1,5 +1,33 @@
-﻿<h3>ComponenteCrearCliente</h3>
+﻿@using Entities
+@using Business
+
+<EditForm Model="oCliente">
+    <div class="form-group">
+        <label>Nombre del Cliente</label>
+        <InputText class="form-control" @bind-Value="@oCliente.NombreCliente"></InputText>
+    </div>
+    <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked @bind-value="oCliente.Estatus">
+        <label class="form-check-label" for="flexSwitchCheckChecked">Activar Cliente</label>
+    </div>
+    <br />
+    <input class="btn btn-primary" type="button" value="Guardar" @onclick="GuardarClinete" />
+</EditForm>
+
 
 @code {
+    EntidadCliente oCliente = new EntidadCliente();
 
+    List<EntidadCliente> clientes = new List<EntidadCliente>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        clientes = B_Cliente.ListaCliente();
+    }
+
+    private void GuardarClinete()
+    {
+        B_Cliente.CrearCliente(oCliente);
+        
+    }
 }

@@ -118,7 +118,7 @@ using ServerVentas.Components.Ventas;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 33 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Shared\NavMenu.razor"
+#line 49 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

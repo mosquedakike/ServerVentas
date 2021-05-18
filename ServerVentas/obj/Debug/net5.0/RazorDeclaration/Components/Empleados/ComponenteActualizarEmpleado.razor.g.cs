@@ -110,6 +110,20 @@ using ServerVentas.Components.Ventas;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 1 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Components\Empleados\ComponenteActualizarEmpleado.razor"
+using Entities;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Components\Empleados\ComponenteActualizarEmpleado.razor"
+using Business;
+
+#line default
+#line hidden
+#nullable disable
     public partial class ComponenteActualizarEmpleado : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -117,6 +131,34 @@ using ServerVentas.Components.Ventas;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 42 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Components\Empleados\ComponenteActualizarEmpleado.razor"
+       
+    [Parameter]
+    public int EmpleadoId { get; set; }
+
+    EntidadEmpleado oEmpleado = new EntidadEmpleado();
+    EntidadProyecto oProyecto = new EntidadProyecto();
+
+    List<EntidadEmpleado> empleados = new List<EntidadEmpleado>();
+    List<EntidadProyecto> proyectos = new List<EntidadProyecto>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        empleados = B_Empleado.ListaEmpleado();
+        proyectos = B_Proyecto.ListaProyecto();
+        oEmpleado = B_Empleado.EmpleadoPorId(EmpleadoId);
+    }
+
+    private void ActualzarEmpleado()
+    {
+        B_Empleado.ActualizarEmpleado(oEmpleado);
+
+    }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

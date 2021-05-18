@@ -1,0 +1,15 @@
+﻿@page "/empleado/actualizar/{EmpleadoId}"
+
+<ComponenteActualizarEmpleado EmpleadoId="@EmpleadoId"></ComponenteActualizarEmpleado>
+
+
+@code{
+    [Parameter]
+    public int EmpleadoId { get; set; }
+
+    int Empleado_Id;
+    protected override async Task OnInitializedAsync()
+    {
+        Empleado_Id = EmpleadoId;
+    }
+}

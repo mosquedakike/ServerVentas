@@ -147,9 +147,9 @@ namespace DataAccess.Migrations
                 columns: new[] { "VentaId", "Cantidad", "DescripcionProducto", "EmpleadoId", "FechaCaptura", "FechaVenta", "NombreProducto" },
                 values: new object[,]
                 {
-                    { 1, 3, "25W50", 1, new DateTime(2021, 5, 17, 11, 46, 19, 190, DateTimeKind.Local).AddTicks(8566), new DateTime(2021, 5, 17, 11, 46, 19, 184, DateTimeKind.Local).AddTicks(9414), "QS MAXIMA VISCOSIDAD SAE 25W50 CF4" },
-                    { 2, 3, "GREEN OIL", 2, new DateTime(2021, 5, 17, 11, 46, 19, 191, DateTimeKind.Local).AddTicks(4), new DateTime(2021, 5, 17, 11, 46, 19, 190, DateTimeKind.Local).AddTicks(9974), "QS GREEN OIL SAE 140" },
-                    { 3, 3, "Anticongelante", 3, new DateTime(2021, 5, 17, 11, 46, 19, 191, DateTimeKind.Local).AddTicks(22), new DateTime(2021, 5, 17, 11, 46, 19, 191, DateTimeKind.Local).AddTicks(14), "ANTICONGELANTE CONCENTRACION IDEAL" }
+                    { 1, 3, "25W50", 1, new DateTime(2021, 5, 17, 17, 10, 34, 182, DateTimeKind.Local).AddTicks(3243), new DateTime(2021, 5, 17, 17, 10, 34, 178, DateTimeKind.Local).AddTicks(2967), "QS MAXIMA VISCOSIDAD SAE 25W50 CF4" },
+                    { 2, 3, "GREEN OIL", 2, new DateTime(2021, 5, 17, 17, 10, 34, 182, DateTimeKind.Local).AddTicks(4303), new DateTime(2021, 5, 17, 17, 10, 34, 182, DateTimeKind.Local).AddTicks(4281), "QS GREEN OIL SAE 140" },
+                    { 3, 3, "Anticongelante", 3, new DateTime(2021, 5, 17, 17, 10, 34, 182, DateTimeKind.Local).AddTicks(4314), new DateTime(2021, 5, 17, 17, 10, 34, 182, DateTimeKind.Local).AddTicks(4310), "ANTICONGELANTE CONCENTRACION IDEAL" }
                 });
 
             migrationBuilder.CreateIndex(

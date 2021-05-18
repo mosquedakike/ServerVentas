@@ -110,6 +110,20 @@ using ServerVentas.Components.Ventas;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 1 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Components\Clientes\ComponenteCrearCliente.razor"
+using Entities;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Components\Clientes\ComponenteCrearCliente.razor"
+using Business;
+
+#line default
+#line hidden
+#nullable disable
     public partial class ComponenteCrearCliente : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -117,6 +131,27 @@ using ServerVentas.Components.Ventas;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 18 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Components\Clientes\ComponenteCrearCliente.razor"
+       
+    EntidadCliente oCliente = new EntidadCliente();
+
+    List<EntidadCliente> clientes = new List<EntidadCliente>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        clientes = B_Cliente.ListaCliente();
+    }
+
+    private void GuardarClinete()
+    {
+        B_Cliente.CrearCliente(oCliente);
+        
+    }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

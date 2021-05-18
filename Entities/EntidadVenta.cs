@@ -21,7 +21,7 @@ namespace Entities
         [Required(ErrorMessage = "El campo Producto es requerido")]
         public string NombreProducto { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "El campo Viscosidad es requerido")]
         public string DescripcionProducto { get; set; }
 
         [Required]

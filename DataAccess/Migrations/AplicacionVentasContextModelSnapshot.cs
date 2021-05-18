@@ -255,8 +255,8 @@ namespace DataAccess.Migrations
                             Cantidad = 3,
                             DescripcionProducto = "25W50",
                             EmpleadoId = 1,
-                            FechaCaptura = new DateTime(2021, 5, 17, 14, 7, 57, 71, DateTimeKind.Local).AddTicks(7340),
-                            FechaVenta = new DateTime(2021, 5, 17, 14, 7, 57, 67, DateTimeKind.Local).AddTicks(8030),
+                            FechaCaptura = new DateTime(2021, 5, 17, 17, 10, 34, 182, DateTimeKind.Local).AddTicks(3243),
+                            FechaVenta = new DateTime(2021, 5, 17, 17, 10, 34, 178, DateTimeKind.Local).AddTicks(2967),
                             NombreProducto = "QS MAXIMA VISCOSIDAD SAE 25W50 CF4"
                         },
                         new
@@ -265,8 +265,8 @@ namespace DataAccess.Migrations
                             Cantidad = 3,
                             DescripcionProducto = "GREEN OIL",
                             EmpleadoId = 2,
-                            FechaCaptura = new DateTime(2021, 5, 17, 14, 7, 57, 71, DateTimeKind.Local).AddTicks(8378),
-                            FechaVenta = new DateTime(2021, 5, 17, 14, 7, 57, 71, DateTimeKind.Local).AddTicks(8353),
+                            FechaCaptura = new DateTime(2021, 5, 17, 17, 10, 34, 182, DateTimeKind.Local).AddTicks(4303),
+                            FechaVenta = new DateTime(2021, 5, 17, 17, 10, 34, 182, DateTimeKind.Local).AddTicks(4281),
                             NombreProducto = "QS GREEN OIL SAE 140"
                         },
                         new
@@ -275,8 +275,8 @@ namespace DataAccess.Migrations
                             Cantidad = 3,
                             DescripcionProducto = "Anticongelante",
                             EmpleadoId = 3,
-                            FechaCaptura = new DateTime(2021, 5, 17, 14, 7, 57, 71, DateTimeKind.Local).AddTicks(8389),
-                            FechaVenta = new DateTime(2021, 5, 17, 14, 7, 57, 71, DateTimeKind.Local).AddTicks(8384),
+                            FechaCaptura = new DateTime(2021, 5, 17, 17, 10, 34, 182, DateTimeKind.Local).AddTicks(4314),
+                            FechaVenta = new DateTime(2021, 5, 17, 17, 10, 34, 182, DateTimeKind.Local).AddTicks(4310),
                             NombreProducto = "ANTICONGELANTE CONCENTRACION IDEAL"
                         });
                 });

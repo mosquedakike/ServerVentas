@@ -2,7 +2,7 @@
 @using Business
 
 <div>
-    <EditForm Model="oVenta">
+    <EditForm Model="oVenta" OnValidSubmit="@GuardarVenta">
         <div class="form-group">
             <label>Empleado</label>
             <InputSelect class="form-control" @bind-Value="oVenta.EmpleadoId">
@@ -13,10 +13,6 @@
                 }
             </InputSelect>
         </div>
-        @*<div class="form-group">
-                <label>Municipio</label>
-                <input class="form-control" id="disabledInput" type="text" placeholder="" disabled>
-            </div>*@
         <div class="form-group">
             <label class="form-label">Producto</label>
             <input @bind-value="oVenta.NombreProducto" class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Buscar producto...">
@@ -37,11 +33,12 @@
         </div>
         <div class="form-group">
             <label>Fecha</label>
-            <InputDate @bind-Value="oVenta.FechaVenta" class="form-control"></InputDate>
+            <InputDate @bind-Value="oVenta.FechaVenta" class="form-control" min="2021-01-01"></InputDate>
         </div>
         <input class="btn btn-primary" type="button" value="Guardar" @onclick="GuardarVenta" />
     </EditForm>
 </div>
+    
 
 @code {
 
@@ -65,6 +62,7 @@
     {
         oVenta.FechaCaptura = DateTime.Now;
         B_Venta.CrearVenta(oVenta);
+        
     }
 
 }

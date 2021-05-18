@@ -20,9 +20,6 @@
 
   <ItemGroup>
     <Folder Include="Components\Productos\" />
-    <Folder Include="Pages\Clientes\" />
-    <Folder Include="Pages\Empleados\" />
-    <Folder Include="Pages\Proyectos\" />
     <Folder Include="Pages\Productos\" />
   </ItemGroup>
 

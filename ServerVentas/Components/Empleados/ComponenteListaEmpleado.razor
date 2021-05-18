@@ -1,5 +1,34 @@
-﻿<h3>ComponenteListaEmpleado</h3>
+﻿@using Entities
+@using Business
+
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Puesto</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var empleado in empleados)
+        {
+        <tr>
+            <td>@empleado.EmpleadoId</td>
+            <td>@empleado.NombreEmpleado @empleado.ApPaterno @empleado.ApMaterno</td>
+            <td>@empleado.PuestoEmpleado</td>
+            <td><a href="empleado/actualizar/@empleado.EmpleadoId">Actualizar</a></td>
+        </tr>
+        }
+    </tbody>
+</table>
 
 @code {
+    List<EntidadEmpleado> empleados = new List<EntidadEmpleado>();
 
+    protected override async Task OnInitializedAsync()
+    {
+        empleados = B_Empleado.ListaEmpleado();
+    }
 }
+

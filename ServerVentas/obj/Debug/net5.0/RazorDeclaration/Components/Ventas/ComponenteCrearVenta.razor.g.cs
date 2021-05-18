@@ -132,7 +132,7 @@ using Business;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 46 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Components\Ventas\ComponenteCrearVenta.razor"
+#line 43 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Components\Ventas\ComponenteCrearVenta.razor"
        
 
     EntidadVenta oVenta = new EntidadVenta();
@@ -155,6 +155,7 @@ using Business;
     {
         oVenta.FechaCaptura = DateTime.Now;
         B_Venta.CrearVenta(oVenta);
+        
     }
 
 

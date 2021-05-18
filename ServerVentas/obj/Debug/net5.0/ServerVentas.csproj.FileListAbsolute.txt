@@ -142,3 +142,15 @@ C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\Razor\Com
 C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\Razor\Components\Proyectos\ComponenteActualizarProyecto.razor.g.cs
 C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\Razor\Components\Proyectos\ComponenteCrearProyecto.razor.g.cs
 C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\Razor\Components\Proyectos\ComponenteListaProyecto.razor.g.cs
+C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\RazorDeclaration\Pages\Clientes\PaginaCrearCliente.razor.g.cs
+C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\Razor\Pages\Clientes\PaginaCrearCliente.razor.g.cs
+C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\RazorDeclaration\Pages\Clientes\PaginaListaCliente.razor.g.cs
+C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\Razor\Pages\Clientes\PaginaListaCliente.razor.g.cs
+C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\RazorDeclaration\Pages\Proyectos\PaginaCrearProyecto.razor.g.cs
+C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\Razor\Pages\Proyectos\PaginaCrearProyecto.razor.g.cs
+C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\RazorDeclaration\Pages\Empleados\PaginaCrearEmpleado.razor.g.cs
+C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\Razor\Pages\Empleados\PaginaCrearEmpleado.razor.g.cs
+C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\RazorDeclaration\Pages\Empleados\PaginaListaEmpleado.razor.g.cs
+C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\Razor\Pages\Empleados\PaginaListaEmpleado.razor.g.cs
+C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\RazorDeclaration\Pages\Empleados\PaginaActualizarEmpleado.razor.g.cs
+C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\Razor\Pages\Empleados\PaginaActualizarEmpleado.razor.g.cs

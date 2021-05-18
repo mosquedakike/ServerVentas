@@ -110,6 +110,20 @@ using ServerVentas.Components.Ventas;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 1 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Components\Proyectos\ComponenteCrearProyecto.razor"
+using Entities;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Components\Proyectos\ComponenteCrearProyecto.razor"
+using Business;
+
+#line default
+#line hidden
+#nullable disable
     public partial class ComponenteCrearProyecto : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -117,6 +131,31 @@ using ServerVentas.Components.Ventas;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 32 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Components\Proyectos\ComponenteCrearProyecto.razor"
+       
+
+    EntidadProyecto oProyecto = new EntidadProyecto();
+    EntidadCliente oCliente = new EntidadCliente();
+
+    List<EntidadProyecto> proyectos = new List<EntidadProyecto>();
+    List<EntidadCliente> clientes = new List<EntidadCliente>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        proyectos = B_Proyecto.ListaProyecto();
+        clientes = B_Cliente.ListaCliente();
+    }
+
+    private void GuardarProyecto()
+    {
+         B_Proyecto.CrearProyecto(oProyecto);
+    }
+
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

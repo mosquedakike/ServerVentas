@@ -110,6 +110,20 @@ using ServerVentas.Components.Ventas;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 1 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Components\Empleados\ComponenteCrearEmpleado.razor"
+using Entities;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Components\Empleados\ComponenteCrearEmpleado.razor"
+using Business;
+
+#line default
+#line hidden
+#nullable disable
     public partial class ComponenteCrearEmpleado : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -117,6 +131,30 @@ using ServerVentas.Components.Ventas;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 38 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Components\Empleados\ComponenteCrearEmpleado.razor"
+       
+    EntidadEmpleado oEmpleado = new EntidadEmpleado();
+    EntidadProyecto oProyecto = new EntidadProyecto();
+
+    List<EntidadEmpleado> empleados = new List<EntidadEmpleado>();
+List<EntidadProyecto> proyectos = new List<EntidadProyecto>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        empleados = B_Empleado.ListaEmpleado();
+        proyectos = B_Proyecto.ListaProyecto();
+    }
+
+    private void CrearEmpleado()
+    {
+        B_Empleado.CrearEmpleado(oEmpleado);
+
+    }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

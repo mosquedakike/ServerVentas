@@ -1,5 +1,33 @@
-﻿<h3>ComponenteListaCliente</h3>
+﻿@using Entities
+@using Business
+
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Estatus</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cliente in clientes)
+        {
+            <tr>
+                <td>@cliente.ClienteId</td>
+                <td>@cliente.NombreCliente</td>
+                <td>@cliente.Estatus</td>
+                <td><a href="cliente/actualizar/@cliente.ClienteId">Actualizar</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
 
 @code {
+    List<EntidadCliente> clientes = new List<EntidadCliente>();
 
+    protected override async Task OnInitializedAsync()
+    {
+        clientes = B_Cliente.ListaCliente();
+    }
 }

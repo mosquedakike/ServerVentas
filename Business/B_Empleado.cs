@@ -34,5 +34,14 @@ namespace Business
                 db.SaveChanges();
             }
         }
+
+        public static void ActualizarEmpleado(EntidadEmpleado oEmpleado)
+        {
+            using (var db = new AplicacionVentasContext())
+            {
+                db.Empleados.Update(oEmpleado);
+                db.SaveChanges();
+            }
+        }
     }
 }
