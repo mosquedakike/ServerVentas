@@ -110,6 +110,20 @@ using ServerVentas.Components.Ventas;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 1 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Components\Proyectos\ComponenteActualizarProyecto.razor"
+using Entities;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Components\Proyectos\ComponenteActualizarProyecto.razor"
+using Business;
+
+#line default
+#line hidden
+#nullable disable
     public partial class ComponenteActualizarProyecto : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -117,6 +131,34 @@ using ServerVentas.Components.Ventas;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 36 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Components\Proyectos\ComponenteActualizarProyecto.razor"
+       
+    [Parameter]
+    public int ProyectoId { get; set; }
+
+    EntidadProyecto oProyecto = new EntidadProyecto();
+
+    List<EntidadProyecto> proyectos = new List<EntidadProyecto>();
+    List<EntidadCliente> clientes = new List<EntidadCliente>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        proyectos = B_Proyecto.ListaProyecto();
+        clientes = B_Cliente.ListaCliente();
+        oProyecto = B_Proyecto.ProyectoPorId(ProyectoId);
+    }
+
+    private void ActualizarProyecto()
+    {
+        B_Proyecto.ActualizarProyecto(oProyecto);
+        NavManager.NavigateTo("proyecto/lista");
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavManager { get; set; }
     }
 }
 #pragma warning restore 1591

@@ -132,7 +132,7 @@ using Business;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 42 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Components\Empleados\ComponenteActualizarEmpleado.razor"
+#line 44 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Components\Empleados\ComponenteActualizarEmpleado.razor"
        
     [Parameter]
     public int EmpleadoId { get; set; }
@@ -153,12 +153,13 @@ using Business;
     private void ActualzarEmpleado()
     {
         B_Empleado.ActualizarEmpleado(oEmpleado);
-
+        NavManager.NavigateTo("empleado/lista");
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavManager { get; set; }
     }
 }
 #pragma warning restore 1591

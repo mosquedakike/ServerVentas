@@ -110,6 +110,20 @@ using ServerVentas.Components.Ventas;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 1 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Components\Proyectos\ComponenteListaProyecto.razor"
+using Entities;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Components\Proyectos\ComponenteListaProyecto.razor"
+using Business;
+
+#line default
+#line hidden
+#nullable disable
     public partial class ComponenteListaProyecto : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -117,6 +131,19 @@ using ServerVentas.Components.Ventas;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 26 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Components\Proyectos\ComponenteListaProyecto.razor"
+       
+    List<EntidadProyecto> proyectos = new List<EntidadProyecto>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        proyectos = B_Proyecto.ListaProyecto();
+    }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

@@ -1,0 +1,16 @@
+﻿@page "/proyecto/actualizar/{ProyectoId:int}"
+
+<ComponenteActualizarProyecto ProyectoId="@ProyectoId"></ComponenteActualizarProyecto>
+
+
+@code{
+    [Parameter]
+    public int ProyectoId { get; set; }
+
+    int Proyecto_Id;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Proyecto_Id = ProyectoId;
+    }
+}

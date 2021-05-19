@@ -34,5 +34,14 @@ namespace Business
                 db.SaveChanges();
             }
         }
+
+        public static void ActualizarProyecto(EntidadProyecto oProyecto)
+        {
+            using (var db = new AplicacionVentasContext())
+            {
+                db.Proyectos.Update(oProyecto);
+                db.SaveChanges();
+            }
+        }
     }
 }

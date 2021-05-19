@@ -110,7 +110,7 @@ using ServerVentas.Components.Ventas;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/empleado/actualizar/{EmpleadoId}")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/empleado/actualizar/{EmpleadoId:int}")]
     public partial class PaginaActualizarEmpleado : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -125,6 +125,7 @@ using ServerVentas.Components.Ventas;
     public int EmpleadoId { get; set; }
 
     int Empleado_Id;
+
     protected override async Task OnInitializedAsync()
     {
         Empleado_Id = EmpleadoId;

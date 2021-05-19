@@ -154,3 +154,7 @@ C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\RazorDecl
 C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\Razor\Pages\Empleados\PaginaListaEmpleado.razor.g.cs
 C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\RazorDeclaration\Pages\Empleados\PaginaActualizarEmpleado.razor.g.cs
 C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\Razor\Pages\Empleados\PaginaActualizarEmpleado.razor.g.cs
+C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\RazorDeclaration\Pages\Proyectos\PaginaListaProyecto.razor.g.cs
+C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\Razor\Pages\Proyectos\PaginaListaProyecto.razor.g.cs
+C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\RazorDeclaration\Pages\Proyectos\PaginaActualizarProyecto.razor.g.cs
+C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\Razor\Pages\Proyectos\PaginaActualizarProyecto.razor.g.cs

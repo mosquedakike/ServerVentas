@@ -1,4 +1,4 @@
-﻿@page "/empleado/actualizar/{EmpleadoId}"
+﻿@page "/empleado/actualizar/{EmpleadoId:int}"
 
 <ComponenteActualizarEmpleado EmpleadoId="@EmpleadoId"></ComponenteActualizarEmpleado>
 
@@ -8,6 +8,7 @@
     public int EmpleadoId { get; set; }
 
     int Empleado_Id;
+
     protected override async Task OnInitializedAsync()
     {
         Empleado_Id = EmpleadoId;

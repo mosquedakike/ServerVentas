@@ -1,6 +1,8 @@
 ﻿@using Entities
 @using Business
 
+@inject NavigationManager NavManager;
+
 <EditForm Model="oEmpleado">
     <div class="form-group">
         <label>ID</label>
@@ -36,7 +38,7 @@
         <label class="form-check-label" for="flexSwitchCheckChecked">Activar Empleado</label>
     </div>
     <br />
-    <input class="btn btn-primary" type="button" value="Guardar" @onclick="ActualzarEmpleado" />
+    <input class="btn btn-primary" type="button" value="Actualizar" @onclick="ActualzarEmpleado" />
 </EditForm>
 
 @code {
@@ -59,6 +61,6 @@
     private void ActualzarEmpleado()
     {
         B_Empleado.ActualizarEmpleado(oEmpleado);
-
+        NavManager.NavigateTo("empleado/lista");
     }
 }

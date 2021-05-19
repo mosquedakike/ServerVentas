@@ -1,5 +1,34 @@
-﻿<h3>ComponenteListaProyecto</h3>
+﻿@using Entities
+@using Business
+
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre del Proyecto</th>
+            <th>Municipio</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var proyecto in proyectos)
+        {
+            <tr>
+                <td>@proyecto.ProyectoId</td>
+                <td>@proyecto.NombreProyecto</td>
+                <td>@proyecto.Municipio</td>
+                <td><a href="proyecto/actualizar/@proyecto.ProyectoId">Actualizar</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
 
 @code {
+    List<EntidadProyecto> proyectos = new List<EntidadProyecto>();
 
+    protected override async Task OnInitializedAsync()
+    {
+        proyectos = B_Proyecto.ListaProyecto();
+    }
 }
+
