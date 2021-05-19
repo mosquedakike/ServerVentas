@@ -110,6 +110,13 @@ using ServerVentas.Components.Ventas;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 15 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\_Imports.razor"
+using ServerVentas.Components.Evidencias;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/empleado/crear")]
     public partial class PaginaCrearEmpleado : Microsoft.AspNetCore.Components.ComponentBase
     {

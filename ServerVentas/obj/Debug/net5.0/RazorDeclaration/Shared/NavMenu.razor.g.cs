@@ -110,6 +110,13 @@ using ServerVentas.Components.Ventas;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 15 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\_Imports.razor"
+using ServerVentas.Components.Evidencias;
+
+#line default
+#line hidden
+#nullable disable
     public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -118,7 +125,7 @@ using ServerVentas.Components.Ventas;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 49 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Shared\NavMenu.razor"
+#line 54 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

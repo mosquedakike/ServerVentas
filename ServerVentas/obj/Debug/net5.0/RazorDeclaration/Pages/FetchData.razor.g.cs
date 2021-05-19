@@ -111,6 +111,13 @@ using ServerVentas.Components.Ventas;
 #line hidden
 #nullable disable
 #nullable restore
+#line 15 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\_Imports.razor"
+using ServerVentas.Components.Evidencias;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 3 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Pages\FetchData.razor"
 using ServerVentas.Data;
 

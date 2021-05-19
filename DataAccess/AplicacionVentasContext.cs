@@ -15,6 +15,7 @@ namespace DataAccess
         public DbSet<EntidadProducto> Productos { get; set; }
         public DbSet<EntidadProyecto> Proyectos { get; set; }
         public DbSet<EntidadVenta> Ventas { get; set; }
+        public DbSet<EntidadEvidencia> Evidencias{ get; set; }
 
         //public AplicacionVentasContext(DbContextOptions<AplicacionVentasContext> options)
         //    : base(options)
@@ -43,8 +44,8 @@ namespace DataAccess
                 );
 
             modelBuilder.Entity<EntidadProyecto>().HasData(
-                new EntidadProyecto { ProyectoId = 1, NombreProyecto = "Promotoria Quaker State", Municipio = "Ciudad de Mexico", ClienteId = 1, Estatus = true },
-                new EntidadProyecto { ProyectoId = 2, NombreProyecto = "Promotoria Quaker State", Municipio = "Monterrey", ClienteId = 1, Estatus = true }
+                new EntidadProyecto { ProyectoId = 1, NombreProyecto = "Promotoria Quaker State - CDMX", Municipio = "Ciudad de Mexico", ClienteId = 1, Estatus = true },
+                new EntidadProyecto { ProyectoId = 2, NombreProyecto = "Promotoria Quaker State - Monterrey", Municipio = "Monterrey", ClienteId = 1, Estatus = true }
                 );
 
             modelBuilder.Entity<EntidadEmpleado>().HasData(
@@ -63,6 +64,10 @@ namespace DataAccess
                 new EntidadVenta { VentaId = 1, EmpleadoId = 1, NombreProducto = "QS MAXIMA VISCOSIDAD SAE 25W50 CF4", DescripcionProducto = "25W50", Cantidad = 3, FechaVenta = DateTime.Now, FechaCaptura = DateTime.Now },
                 new EntidadVenta { VentaId = 2, EmpleadoId = 2, NombreProducto = "QS GREEN OIL SAE 140", DescripcionProducto = "GREEN OIL", Cantidad = 3, FechaVenta = DateTime.Now, FechaCaptura = DateTime.Now },
                 new EntidadVenta { VentaId = 3, EmpleadoId = 3, NombreProducto = "ANTICONGELANTE CONCENTRACION IDEAL", DescripcionProducto = "Anticongelante", Cantidad = 3, FechaVenta = DateTime.Now, FechaCaptura = DateTime.Now }
+                );
+
+            modelBuilder.Entity<EntidadEvidencia>().HasData(
+                new EntidadEvidencia { EvidenciaId=1, FechaCaptura=DateTime.Now, Foto="TestURL", EmpleadoId = 1}
                 );
         }
     }

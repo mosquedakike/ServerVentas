@@ -1,0 +1,53 @@
+﻿@using Entities
+@using Business
+
+@*<EditForm Model="oEvidencia">
+    <div class="form-group">
+        <label>Nombre del Empleado</label>
+        <InputSelect class="form-control" @bind-Value="oEvidencia.EmpleadoId">
+            <option value="">Seleccione empleado</option>
+            @foreach (var empleado in empleados)
+            {
+                <option value="@empleado.EmpleadoId">@empleado.NombreEmpleado @empleado.ApPaterno @empleado.ApMaterno</option>
+            }
+        </InputSelect>
+    </div>
+    <InputImg Label="Foto" ImagenSeleccionada="ImagenSeleccionada" ImagenURL="ImagenURL"></InputImg>
+    <input class="btn btn-primary" type="button" value="Guardar" />
+</EditForm>*@
+
+
+@code {
+    EntidadEvidencia oEvidencia = new EntidadEvidencia();
+    EntidadEmpleado oEmpleado = new EntidadEmpleado();
+    List<EntidadEmpleado> empleados = new List<EntidadEmpleado>();
+
+    [Parameter]
+    public EntidadEvidencia Evidencia { get; set; }
+
+    [Parameter]
+    public EventCallback OnValidSubmit { get; set; }
+
+    string imagenURL;
+
+    //protected override void OnInitialized()
+    //{
+    //    if (!string.IsNullOrEmpty(Evidencia.Foto))
+    //    {
+    //        imagenURL = Evidencia.Foto;
+    //        Evidencia.Foto = null;
+    //    }
+    //}
+
+    //protected override async Task OnInitializedAsync()
+    //{
+    //    empleados = B_Empleado.ListaEmpleado();
+
+    //}
+
+    private void ImagenSeleccionada(string imagenBase64)
+    {
+        Evidencia.Foto = imagenBase64;
+        imagenURL = null;
+    }
+}

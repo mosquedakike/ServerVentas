@@ -108,6 +108,13 @@ using ServerVentas.Components.Ventas;
 #line hidden
 #nullable disable
 #nullable restore
+#line 15 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\_Imports.razor"
+using ServerVentas.Components.Evidencias;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Components\Proyectos\ComponenteListaProyecto.razor"
 using Entities;
 

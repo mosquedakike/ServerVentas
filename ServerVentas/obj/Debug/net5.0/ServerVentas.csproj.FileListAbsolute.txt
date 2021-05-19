@@ -158,3 +158,9 @@ C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\RazorDecl
 C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\Razor\Pages\Proyectos\PaginaListaProyecto.razor.g.cs
 C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\RazorDeclaration\Pages\Proyectos\PaginaActualizarProyecto.razor.g.cs
 C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\Razor\Pages\Proyectos\PaginaActualizarProyecto.razor.g.cs
+C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\RazorDeclaration\Components\Evidencias\ComponenteCrearEvidencia.razor.g.cs
+C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\Razor\Components\Evidencias\ComponenteCrearEvidencia.razor.g.cs
+C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\RazorDeclaration\Shared\InputImg.razor.g.cs
+C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\Razor\Shared\InputImg.razor.g.cs
+C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\RazorDeclaration\Pages\Evidencias\PaginaCrearEvidencia.razor.g.cs
+C:\Users\enriq\source\repos\ServerVentas\ServerVentas\obj\Debug\net5.0\Razor\Pages\Evidencias\PaginaCrearEvidencia.razor.g.cs

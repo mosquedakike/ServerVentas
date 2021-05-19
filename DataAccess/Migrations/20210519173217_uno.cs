@@ -85,6 +85,27 @@ namespace DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Evidencias",
+                columns: table => new
+                {
+                    EvidenciaId = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Foto = table.Column<string>(type: "text", nullable: true),
+                    FechaCaptura = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    EmpleadoId = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Evidencias", x => x.EvidenciaId);
+                    table.ForeignKey(
+                        name: "FK_Evidencias_Empleados_EmpleadoId",
+                        column: x => x.EmpleadoId,
+                        principalTable: "Empleados",
+                        principalColumn: "EmpleadoId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Ventas",
                 columns: table => new
                 {
@@ -128,8 +149,8 @@ namespace DataAccess.Migrations
                 columns: new[] { "ProyectoId", "ClienteId", "Estatus", "Municipio", "NombreProyecto" },
                 values: new object[,]
                 {
-                    { 1, 1, true, "Ciudad de Mexico", "Promotoria Quaker State" },
-                    { 2, 1, true, "Monterrey", "Promotoria Quaker State" }
+                    { 1, 1, true, "Ciudad de Mexico", "Promotoria Quaker State - CDMX" },
+                    { 2, 1, true, "Monterrey", "Promotoria Quaker State - Monterrey" }
                 });
 
             migrationBuilder.InsertData(
@@ -143,19 +164,29 @@ namespace DataAccess.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "Evidencias",
+                columns: new[] { "EvidenciaId", "EmpleadoId", "FechaCaptura", "Foto" },
+                values: new object[] { 1, 1, new DateTime(2021, 5, 19, 12, 32, 16, 427, DateTimeKind.Local).AddTicks(1893), "TestURL" });
+
+            migrationBuilder.InsertData(
                 table: "Ventas",
                 columns: new[] { "VentaId", "Cantidad", "DescripcionProducto", "EmpleadoId", "FechaCaptura", "FechaVenta", "NombreProducto" },
                 values: new object[,]
                 {
-                    { 1, 3, "25W50", 1, new DateTime(2021, 5, 17, 17, 10, 34, 182, DateTimeKind.Local).AddTicks(3243), new DateTime(2021, 5, 17, 17, 10, 34, 178, DateTimeKind.Local).AddTicks(2967), "QS MAXIMA VISCOSIDAD SAE 25W50 CF4" },
-                    { 2, 3, "GREEN OIL", 2, new DateTime(2021, 5, 17, 17, 10, 34, 182, DateTimeKind.Local).AddTicks(4303), new DateTime(2021, 5, 17, 17, 10, 34, 182, DateTimeKind.Local).AddTicks(4281), "QS GREEN OIL SAE 140" },
-                    { 3, 3, "Anticongelante", 3, new DateTime(2021, 5, 17, 17, 10, 34, 182, DateTimeKind.Local).AddTicks(4314), new DateTime(2021, 5, 17, 17, 10, 34, 182, DateTimeKind.Local).AddTicks(4310), "ANTICONGELANTE CONCENTRACION IDEAL" }
+                    { 1, 3, "25W50", 1, new DateTime(2021, 5, 19, 12, 32, 16, 426, DateTimeKind.Local).AddTicks(7451), new DateTime(2021, 5, 19, 12, 32, 16, 421, DateTimeKind.Local).AddTicks(2050), "QS MAXIMA VISCOSIDAD SAE 25W50 CF4" },
+                    { 2, 3, "GREEN OIL", 2, new DateTime(2021, 5, 19, 12, 32, 16, 426, DateTimeKind.Local).AddTicks(8847), new DateTime(2021, 5, 19, 12, 32, 16, 426, DateTimeKind.Local).AddTicks(8814), "QS GREEN OIL SAE 140" },
+                    { 3, 3, "Anticongelante", 3, new DateTime(2021, 5, 19, 12, 32, 16, 426, DateTimeKind.Local).AddTicks(8865), new DateTime(2021, 5, 19, 12, 32, 16, 426, DateTimeKind.Local).AddTicks(8858), "ANTICONGELANTE CONCENTRACION IDEAL" }
                 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Empleados_ProyectoId",
                 table: "Empleados",
                 column: "ProyectoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Evidencias_EmpleadoId",
+                table: "Evidencias",
+                column: "EmpleadoId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Proyectos_ClienteId",
@@ -170,6 +201,9 @@ namespace DataAccess.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Evidencias");
+
             migrationBuilder.DropTable(
                 name: "Productos");
 

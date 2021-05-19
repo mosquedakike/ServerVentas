@@ -117,6 +117,38 @@ namespace DataAccess.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Entities.EntidadEvidencia", b =>
+                {
+                    b.Property<int>("EvidenciaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<int>("EmpleadoId")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime>("FechaCaptura")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<string>("Foto")
+                        .HasColumnType("text");
+
+                    b.HasKey("EvidenciaId");
+
+                    b.HasIndex("EmpleadoId");
+
+                    b.ToTable("Evidencias");
+
+                    b.HasData(
+                        new
+                        {
+                            EvidenciaId = 1,
+                            EmpleadoId = 1,
+                            FechaCaptura = new DateTime(2021, 5, 19, 12, 32, 16, 427, DateTimeKind.Local).AddTicks(1893),
+                            Foto = "TestURL"
+                        });
+                });
+
             modelBuilder.Entity("Entities.EntidadProducto", b =>
                 {
                     b.Property<int>("ProductoId")
@@ -203,7 +235,7 @@ namespace DataAccess.Migrations
                             ClienteId = 1,
                             Estatus = true,
                             Municipio = "Ciudad de Mexico",
-                            NombreProyecto = "Promotoria Quaker State"
+                            NombreProyecto = "Promotoria Quaker State - CDMX"
                         },
                         new
                         {
@@ -211,7 +243,7 @@ namespace DataAccess.Migrations
                             ClienteId = 1,
                             Estatus = true,
                             Municipio = "Monterrey",
-                            NombreProyecto = "Promotoria Quaker State"
+                            NombreProyecto = "Promotoria Quaker State - Monterrey"
                         });
                 });
 
@@ -235,7 +267,8 @@ namespace DataAccess.Migrations
                     b.Property<DateTime>("FechaCaptura")
                         .HasColumnType("timestamp without time zone");
 
-                    b.Property<DateTime>("FechaVenta")
+                    b.Property<DateTime?>("FechaVenta")
+                        .IsRequired()
                         .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("NombreProducto")
@@ -255,8 +288,8 @@ namespace DataAccess.Migrations
                             Cantidad = 3,
                             DescripcionProducto = "25W50",
                             EmpleadoId = 1,
-                            FechaCaptura = new DateTime(2021, 5, 17, 17, 10, 34, 182, DateTimeKind.Local).AddTicks(3243),
-                            FechaVenta = new DateTime(2021, 5, 17, 17, 10, 34, 178, DateTimeKind.Local).AddTicks(2967),
+                            FechaCaptura = new DateTime(2021, 5, 19, 12, 32, 16, 426, DateTimeKind.Local).AddTicks(7451),
+                            FechaVenta = new DateTime(2021, 5, 19, 12, 32, 16, 421, DateTimeKind.Local).AddTicks(2050),
                             NombreProducto = "QS MAXIMA VISCOSIDAD SAE 25W50 CF4"
                         },
                         new
@@ -265,8 +298,8 @@ namespace DataAccess.Migrations
                             Cantidad = 3,
                             DescripcionProducto = "GREEN OIL",
                             EmpleadoId = 2,
-                            FechaCaptura = new DateTime(2021, 5, 17, 17, 10, 34, 182, DateTimeKind.Local).AddTicks(4303),
-                            FechaVenta = new DateTime(2021, 5, 17, 17, 10, 34, 182, DateTimeKind.Local).AddTicks(4281),
+                            FechaCaptura = new DateTime(2021, 5, 19, 12, 32, 16, 426, DateTimeKind.Local).AddTicks(8847),
+                            FechaVenta = new DateTime(2021, 5, 19, 12, 32, 16, 426, DateTimeKind.Local).AddTicks(8814),
                             NombreProducto = "QS GREEN OIL SAE 140"
                         },
                         new
@@ -275,8 +308,8 @@ namespace DataAccess.Migrations
                             Cantidad = 3,
                             DescripcionProducto = "Anticongelante",
                             EmpleadoId = 3,
-                            FechaCaptura = new DateTime(2021, 5, 17, 17, 10, 34, 182, DateTimeKind.Local).AddTicks(4314),
-                            FechaVenta = new DateTime(2021, 5, 17, 17, 10, 34, 182, DateTimeKind.Local).AddTicks(4310),
+                            FechaCaptura = new DateTime(2021, 5, 19, 12, 32, 16, 426, DateTimeKind.Local).AddTicks(8865),
+                            FechaVenta = new DateTime(2021, 5, 19, 12, 32, 16, 426, DateTimeKind.Local).AddTicks(8858),
                             NombreProducto = "ANTICONGELANTE CONCENTRACION IDEAL"
                         });
                 });
@@ -290,6 +323,17 @@ namespace DataAccess.Migrations
                         .IsRequired();
 
                     b.Navigation("Proyecto");
+                });
+
+            modelBuilder.Entity("Entities.EntidadEvidencia", b =>
+                {
+                    b.HasOne("Entities.EntidadEmpleado", "Empleado")
+                        .WithMany("Evidencia")
+                        .HasForeignKey("EmpleadoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Empleado");
                 });
 
             modelBuilder.Entity("Entities.EntidadProyecto", b =>
@@ -321,6 +365,8 @@ namespace DataAccess.Migrations
 
             modelBuilder.Entity("Entities.EntidadEmpleado", b =>
                 {
+                    b.Navigation("Evidencia");
+
                     b.Navigation("Ventas");
                 });
 

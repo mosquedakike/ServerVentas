@@ -36,5 +36,7 @@ namespace Entities
 
         //Relacion con SaleEntity
         public ICollection<EntidadVenta> Ventas { get; set; }
+
+        public ICollection<EntidadEvidencia> Evidencia { get; set; }
     }
 }
