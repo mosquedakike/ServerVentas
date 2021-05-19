@@ -28,7 +28,7 @@ namespace Entities
         public int Cantidad { get; set; }
 
         [Required]
-        public DateTime FechaVenta { get; set; }
+        public DateTime? FechaVenta { get; set; }
 
         [Required]
         public DateTime FechaCaptura { get; set; }
