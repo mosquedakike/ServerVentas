@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(AplicacionVentasContext))]
-    [Migration("20210519173217_uno")]
+    [Migration("20210520221504_uno")]
     partial class uno
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -146,7 +146,7 @@ namespace DataAccess.Migrations
                         {
                             EvidenciaId = 1,
                             EmpleadoId = 1,
-                            FechaCaptura = new DateTime(2021, 5, 19, 12, 32, 16, 427, DateTimeKind.Local).AddTicks(1893),
+                            FechaCaptura = new DateTime(2021, 5, 20, 17, 15, 3, 174, DateTimeKind.Local).AddTicks(4327),
                             Foto = "TestURL"
                         });
                 });
@@ -290,8 +290,8 @@ namespace DataAccess.Migrations
                             Cantidad = 3,
                             DescripcionProducto = "25W50",
                             EmpleadoId = 1,
-                            FechaCaptura = new DateTime(2021, 5, 19, 12, 32, 16, 426, DateTimeKind.Local).AddTicks(7451),
-                            FechaVenta = new DateTime(2021, 5, 19, 12, 32, 16, 421, DateTimeKind.Local).AddTicks(2050),
+                            FechaCaptura = new DateTime(2021, 5, 20, 17, 15, 3, 174, DateTimeKind.Local).AddTicks(1279),
+                            FechaVenta = new DateTime(2021, 5, 20, 17, 15, 3, 169, DateTimeKind.Local).AddTicks(925),
                             NombreProducto = "QS MAXIMA VISCOSIDAD SAE 25W50 CF4"
                         },
                         new
@@ -300,8 +300,8 @@ namespace DataAccess.Migrations
                             Cantidad = 3,
                             DescripcionProducto = "GREEN OIL",
                             EmpleadoId = 2,
-                            FechaCaptura = new DateTime(2021, 5, 19, 12, 32, 16, 426, DateTimeKind.Local).AddTicks(8847),
-                            FechaVenta = new DateTime(2021, 5, 19, 12, 32, 16, 426, DateTimeKind.Local).AddTicks(8814),
+                            FechaCaptura = new DateTime(2021, 5, 20, 17, 15, 3, 174, DateTimeKind.Local).AddTicks(2174),
+                            FechaVenta = new DateTime(2021, 5, 20, 17, 15, 3, 174, DateTimeKind.Local).AddTicks(2154),
                             NombreProducto = "QS GREEN OIL SAE 140"
                         },
                         new
@@ -310,8 +310,8 @@ namespace DataAccess.Migrations
                             Cantidad = 3,
                             DescripcionProducto = "Anticongelante",
                             EmpleadoId = 3,
-                            FechaCaptura = new DateTime(2021, 5, 19, 12, 32, 16, 426, DateTimeKind.Local).AddTicks(8865),
-                            FechaVenta = new DateTime(2021, 5, 19, 12, 32, 16, 426, DateTimeKind.Local).AddTicks(8858),
+                            FechaCaptura = new DateTime(2021, 5, 20, 17, 15, 3, 174, DateTimeKind.Local).AddTicks(2184),
+                            FechaVenta = new DateTime(2021, 5, 20, 17, 15, 3, 174, DateTimeKind.Local).AddTicks(2180),
                             NombreProducto = "ANTICONGELANTE CONCENTRACION IDEAL"
                         });
                 });

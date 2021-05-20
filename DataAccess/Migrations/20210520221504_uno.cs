@@ -166,16 +166,16 @@ namespace DataAccess.Migrations
             migrationBuilder.InsertData(
                 table: "Evidencias",
                 columns: new[] { "EvidenciaId", "EmpleadoId", "FechaCaptura", "Foto" },
-                values: new object[] { 1, 1, new DateTime(2021, 5, 19, 12, 32, 16, 427, DateTimeKind.Local).AddTicks(1893), "TestURL" });
+                values: new object[] { 1, 1, new DateTime(2021, 5, 20, 17, 15, 3, 174, DateTimeKind.Local).AddTicks(4327), "TestURL" });
 
             migrationBuilder.InsertData(
                 table: "Ventas",
                 columns: new[] { "VentaId", "Cantidad", "DescripcionProducto", "EmpleadoId", "FechaCaptura", "FechaVenta", "NombreProducto" },
                 values: new object[,]
                 {
-                    { 1, 3, "25W50", 1, new DateTime(2021, 5, 19, 12, 32, 16, 426, DateTimeKind.Local).AddTicks(7451), new DateTime(2021, 5, 19, 12, 32, 16, 421, DateTimeKind.Local).AddTicks(2050), "QS MAXIMA VISCOSIDAD SAE 25W50 CF4" },
-                    { 2, 3, "GREEN OIL", 2, new DateTime(2021, 5, 19, 12, 32, 16, 426, DateTimeKind.Local).AddTicks(8847), new DateTime(2021, 5, 19, 12, 32, 16, 426, DateTimeKind.Local).AddTicks(8814), "QS GREEN OIL SAE 140" },
-                    { 3, 3, "Anticongelante", 3, new DateTime(2021, 5, 19, 12, 32, 16, 426, DateTimeKind.Local).AddTicks(8865), new DateTime(2021, 5, 19, 12, 32, 16, 426, DateTimeKind.Local).AddTicks(8858), "ANTICONGELANTE CONCENTRACION IDEAL" }
+                    { 1, 3, "25W50", 1, new DateTime(2021, 5, 20, 17, 15, 3, 174, DateTimeKind.Local).AddTicks(1279), new DateTime(2021, 5, 20, 17, 15, 3, 169, DateTimeKind.Local).AddTicks(925), "QS MAXIMA VISCOSIDAD SAE 25W50 CF4" },
+                    { 2, 3, "GREEN OIL", 2, new DateTime(2021, 5, 20, 17, 15, 3, 174, DateTimeKind.Local).AddTicks(2174), new DateTime(2021, 5, 20, 17, 15, 3, 174, DateTimeKind.Local).AddTicks(2154), "QS GREEN OIL SAE 140" },
+                    { 3, 3, "Anticongelante", 3, new DateTime(2021, 5, 20, 17, 15, 3, 174, DateTimeKind.Local).AddTicks(2184), new DateTime(2021, 5, 20, 17, 15, 3, 174, DateTimeKind.Local).AddTicks(2180), "ANTICONGELANTE CONCENTRACION IDEAL" }
                 });
 
             migrationBuilder.CreateIndex(
