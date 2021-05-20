@@ -139,19 +139,19 @@ using Business;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Components\Evidencias\ComponenteCrearEvidencia.razor"
+#line 21 "C:\Users\enriq\source\repos\ServerVentas\ServerVentas\Components\Evidencias\ComponenteCrearEvidencia.razor"
        
     EntidadEvidencia oEvidencia = new EntidadEvidencia();
     EntidadEmpleado oEmpleado = new EntidadEmpleado();
     List<EntidadEmpleado> empleados = new List<EntidadEmpleado>();
 
-    [Parameter]
-    public EntidadEvidencia Evidencia { get; set; }
+    //[Parameter]
+    //public EntidadEvidencia Evidencia { get; set; }
 
-    [Parameter]
-    public EventCallback OnValidSubmit { get; set; }
+    //[Parameter]
+    //public EventCallback OnValidSubmit { get; set; }
 
-    string imagenURL;
+    //string imagenURL;
 
     //protected override void OnInitialized()
     //{
@@ -162,17 +162,17 @@ using Business;
     //    }
     //}
 
-    //protected override async Task OnInitializedAsync()
-    //{
-    //    empleados = B_Empleado.ListaEmpleado();
-
-    //}
-
-    private void ImagenSeleccionada(string imagenBase64)
+    protected override async Task OnInitializedAsync()
     {
-        Evidencia.Foto = imagenBase64;
-        imagenURL = null;
+        empleados = B_Empleado.ListaEmpleado();
+
     }
+
+    //private void ImagenSeleccionada(string imagenBase64)
+    //{
+    //    Evidencia.Foto = imagenBase64;
+    //    imagenURL = null;
+    //}
 
 #line default
 #line hidden

@@ -1,20 +1,21 @@
 ﻿@using Entities
 @using Business
 
-@*<EditForm Model="oEvidencia">
+<EditForm Model="oEvidencia">
     <div class="form-group">
         <label>Nombre del Empleado</label>
         <InputSelect class="form-control" @bind-Value="oEvidencia.EmpleadoId">
-            <option value="">Seleccione empleado</option>
             @foreach (var empleado in empleados)
             {
                 <option value="@empleado.EmpleadoId">@empleado.NombreEmpleado @empleado.ApPaterno @empleado.ApMaterno</option>
             }
         </InputSelect>
     </div>
-    <InputImg Label="Foto" ImagenSeleccionada="ImagenSeleccionada" ImagenURL="ImagenURL"></InputImg>
+    <div class="form-group">
+        <InputFile accept=".jpg,.jpeg,.png"></InputFile>
+    </div>
     <input class="btn btn-primary" type="button" value="Guardar" />
-</EditForm>*@
+</EditForm>
 
 
 @code {
@@ -22,13 +23,13 @@
     EntidadEmpleado oEmpleado = new EntidadEmpleado();
     List<EntidadEmpleado> empleados = new List<EntidadEmpleado>();
 
-    [Parameter]
-    public EntidadEvidencia Evidencia { get; set; }
+    //[Parameter]
+    //public EntidadEvidencia Evidencia { get; set; }
 
-    [Parameter]
-    public EventCallback OnValidSubmit { get; set; }
+    //[Parameter]
+    //public EventCallback OnValidSubmit { get; set; }
 
-    string imagenURL;
+    //string imagenURL;
 
     //protected override void OnInitialized()
     //{
@@ -39,15 +40,15 @@
     //    }
     //}
 
-    //protected override async Task OnInitializedAsync()
-    //{
-    //    empleados = B_Empleado.ListaEmpleado();
-
-    //}
-
-    private void ImagenSeleccionada(string imagenBase64)
+    protected override async Task OnInitializedAsync()
     {
-        Evidencia.Foto = imagenBase64;
-        imagenURL = null;
+        empleados = B_Empleado.ListaEmpleado();
+
     }
+
+    //private void ImagenSeleccionada(string imagenBase64)
+    //{
+    //    Evidencia.Foto = imagenBase64;
+    //    imagenURL = null;
+    //}
 }

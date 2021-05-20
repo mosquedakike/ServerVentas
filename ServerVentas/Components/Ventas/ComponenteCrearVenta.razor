@@ -6,7 +6,7 @@
         <div class="form-group">
             <label>Empleado</label>
             <InputSelect class="form-control" @bind-Value="oVenta.EmpleadoId">
-                <option value="">Seleccione empleado</option>
+                @*<option value="">Seleccione empleado</option>*@
                 @foreach (var empleado in empleados)
                 {
                     <option value="@empleado.EmpleadoId">@empleado.NombreEmpleado @empleado.ApPaterno @empleado.ApMaterno</option>
